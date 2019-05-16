@@ -28,11 +28,12 @@
         $('#result').html(`Xin chờ...`)
         var name = $('#input-name').val()
         var vec = toVector(name)
+        var displayName = $("<div>").text(toTitleCase(name)).html()
         predict(vec).then(gender => {
             $('#result').html(`
                 Tôi xin mạnh dạn đoán:
                 <br/>
-                Giới tính của ${toTitleCase(name)} là: <b>${gender}</b>
+                Giới tính của ${displayName} là: <b>${gender}</b>
                 <br/><br/>
             `)
         })
