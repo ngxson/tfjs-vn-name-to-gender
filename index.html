@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>name2gender - NuiLab</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Đoán giới tính dựa theo tên" />
+	<meta property="og:description" content="tfjs-vn-name-to-gender" />
+	<meta property="og:image" content="https://ngxson.com/homepage/fb-preview.jpg" />
+	
+	<link rel="shortcut icon" href="images/favorite.png">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-49">
+						name2gender
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Đoán giới tính dựa theo tên</span>
+						<input class="input100" type="text" placeholder="Nhập tên của bạn" id="input-name">
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+					
+					<p id="result"></p>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" type="button" id="predict">
+								Đoán giới tính
+							</button>
+						</div>
+					</div>
+
+					<p id="result">
+						<br/><br/>
+						Made by Nui - <a href="https://ngxson.com" target="_blank">ngxson.com</a><br/>
+						Source code : <a href="https://github.com/ngxson/tfjs-vn-name-to-gender" target="_blank">tfjs-vn-name-to-gender</a>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="vendor/select2/select2.min.js"></script>
+
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+	<script src="js/main.js"></script>
+	<script src="js/tokens.js"></script>
+	<script src="js/nui.js"></script>
+
+</body>
+</html>
