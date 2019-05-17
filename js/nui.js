@@ -15,6 +15,7 @@
     }
 
     function toVector(name) {
+        name = name.toLowerCase()
         vec = []
         for (var i in name) {
             vec.push(name.charCodeAt(i))
