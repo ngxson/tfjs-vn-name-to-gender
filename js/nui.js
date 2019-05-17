@@ -3,23 +3,27 @@
     var model = null
 
     async function init() {
-        model = await tf.loadLayersModel('model/model.json')
+        model = await tf.loadLayersModel('model_v2/model.json')
     }
 
     async function predict(vec) {
         var result = model.predict(tf.tensor([vec]))
         result = await result.array()
         result = result[0]
+        console.log(result)
         return result[0] > result[1] ? 'Nam' : 'Nữ'
     }
 
     function toVector(name) {
-        var arr = name.toLowerCase().split(' ')
-        var vec = arr.map(word => {
-            return TOKEN[word] || 0
-        })
-        while (vec.length < 6) {
+        vec = []
+        for (var i in name) {
+            vec.push(name.charCodeAt(i))
+        }
+        while (vec.length < 28) {
             vec.unshift(0)
+        }
+        while (vec.length > 28) {
+            vec.shift()
         }
         return vec
     }

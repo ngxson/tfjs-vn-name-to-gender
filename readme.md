@@ -11,6 +11,12 @@ The goal is to make a small app to predict the gender base on a person's name. I
 3. Export the model to `model` folder (in JSON format)
 4. Import it into `tensorflowjs` on web
 
+### Changelog
+
+**v2.0**: tokenize by charater instead of word
+
+**v1.0**: initial version, tokenize by word
+
 ### Author
 
 * ngxson (Nui Nguyen)
